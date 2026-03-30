@@ -2,6 +2,8 @@
 
 A small Expo + React Native app for browsing your uploaded cat images, voting, favouriting, and uploading new ones via TheCatAPI.
 
+https://github.com/user-attachments/assets/11d1c5a6-4a27-4981-b0ab-fcaba86d5812
+
 ## Quick start (dev build)
 
 ### 1) Prerequisites
