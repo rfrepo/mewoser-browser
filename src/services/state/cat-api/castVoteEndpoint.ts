@@ -7,16 +7,9 @@ import type { CatApiBuilder, VoteResult } from './types'
 const toError = (e: FetchBaseQueryError) =>
   ({ error: toApiFailureFromBaseQueryError(e) }) as unknown as { error: FetchBaseQueryError }
 
-const getFetchBaseQueryErrorMessage = (e: FetchBaseQueryError): string => {
-  if ('error' in e && typeof e.error === 'string') return e.error
-  if ('status' in e && typeof e.status === 'number') return `HTTP ${e.status}`
-  return 'Request failed'
-}
-
 export const createCastVoteEndpoint = (builder: CatApiBuilder) =>
   builder.mutation<VoteResult, SetVoteParams>({
     queryFn: async ({ vote, imageId, installationId }, _api, _extra, fetchWithBQ) => {
-      const installationIdShort = installationId.slice(0, 6)
       const votesResponse = await fetchWithBQ({
         url: '/votes',
         params: {
@@ -25,7 +18,7 @@ export const createCastVoteEndpoint = (builder: CatApiBuilder) =>
           page: 0
         }
       })
-      
+
       if (votesResponse.error) {
         return toError(votesResponse.error as FetchBaseQueryError)
       }

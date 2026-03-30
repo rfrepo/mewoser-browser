@@ -35,7 +35,7 @@ const getUrl = (input: RequestInfo | URL) =>
 
 beforeEach(() => {
   jest.clearAllMocks()
-  ;(global.fetch as unknown as jest.Mock) = mockFetch // eslint-disable-line @typescript-eslint/no-global-assign
+  ;(global.fetch as unknown as jest.Mock) = mockFetch
   mockGetIdentity.mockReturnValue({ installationId: 'inst-test' })
   mockNetworkState.mockReturnValue({ isOffline: false })
 })

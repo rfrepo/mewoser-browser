@@ -27,7 +27,6 @@ export const useVoteMutation = () => {
       .data
     const previousImage = currentImages?.find(image => image.id === imageId)
     const optimisticNextImage = previousImage != null ? computeVoteState(previousImage, vote) : null
-    const installationIdShort = installationId.slice(0, 6)
 
     setError(null)
 
@@ -58,11 +57,11 @@ export const useVoteMutation = () => {
         installationId
       }).unwrap()
       await Haptics.selectionAsync()
-      
+
       return result
     } catch (mutationError) {
       patch?.undo()
-      
+
       const normalisedError =
         mutationError instanceof Error
           ? mutationError
