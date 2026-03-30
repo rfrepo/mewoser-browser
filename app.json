@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Meowsers Browser",
+    "slug": "meowsers-browser",
+    "scheme": "meowsers",
+    "version": "1.0.0",
+    "orientation": "default",
+    "ios": {
+      "bundleIdentifier": "com.meowsers.browser"
+    },
+    "android": {
+      "package": "com.meowsers.browser"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
