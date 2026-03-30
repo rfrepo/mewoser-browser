@@ -1,0 +1,15 @@
+node_modules
+.cursor
+.expo
+coverage
+dist
+build
+ios/Pods
+android/.gradle
+android/app/build
+package-lock.json
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
