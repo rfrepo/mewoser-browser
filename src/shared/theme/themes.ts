@@ -1,0 +1,95 @@
+export const lightTheme = {
+  radius: {
+    sm: 4,
+    md: 8,
+    xl: 16,
+    lg: 12,
+  },
+  spacing: {
+    xs: 8,
+    xxs: 4,
+    sm: 12,
+    md: 16,
+    lg: 24,
+    xl: 32,
+    gutter: 24,
+    section: 32,
+    cardStack: 32
+  },
+  colours: {
+    bg: '#FFFFFF',
+    info: '#0B6BCB',
+    error: '#C22931',
+    infoBg: '#EAF3FF',
+    border: '#D5DBE5',
+    surface: '#FFFFFF',
+    primary: '#3D63DD',
+    success: '#18794E',
+    warning: '#A15C00',
+    errorBg: '#FDEBEC',
+    focusRing: '#84A2FF',
+    successBg: '#E9F7EF',
+    warningBg: '#FFF4D6',
+    textPrimary: '#1C2230',
+    textInverse: '#FFFFFF',
+    surfaceMuted: '#EBEEF4',
+    borderStrong: '#A7B0BF',
+    primaryHover: '#3557C5',
+    surfaceRaised: '#F7F8FA',
+    textSecondary: '#5B6475',
+    surfaceOverlay: '#FFFFFF',
+    primaryPressed: '#2C49A8'
+  },
+  shadowColor: '#1C2230',
+  shadow: {
+    card: { opacity: 0.08, radius: 10, offsetY: 4, elevation: 2 },
+    tabBar: { opacity: 0.1, radius: 8, offsetY: -3, elevation: 12 },
+    votePill: { opacity: 0.06, radius: 5, offsetY: 2, elevation: 1 },
+    screenHeader: { opacity: 0.08, radius: 6, offsetY: 2, elevation: 3 },
+  },
+  typography: {
+    body: 16,
+    label: 12,
+    title: 20,
+    display: 32,
+    headline: 24,
+    bodySmall: 14,
+    displayLarge: 32,
+    headlineLarge: 24,
+    displayMedium: 24
+  }
+} as const
+
+export const darkTheme = {
+  colours: {
+    bg: '#0F1218',
+    info: '#69B1FF',
+    error: '#FF7D85',
+    border: '#344055',
+    surface: '#141922',
+    primary: '#8AA4FF',
+    success: '#5CC38A',
+    warning: '#F0B04E',
+    focusRing: '#A9BDFF',
+    textPrimary: '#F7F9FC',
+    textInverse: '#0F1218',
+    surfaceMuted: '#232C3F',
+    borderStrong: '#50617F',
+    primaryHover: '#9AB1FF',
+    surfaceRaised: '#1A2130',
+    textSecondary: '#B6C0D1',
+    surfaceOverlay: '#20293A',
+    primaryPressed: '#6F8EFF',
+    infoBg: 'rgba(105, 177, 255, 0.12)',
+    errorBg: 'rgba(255, 125, 133, 0.12)',
+    successBg: 'rgba(92, 195, 138, 0.12)',
+    warningBg: 'rgba(240, 176, 78, 0.12)',
+  },
+  shadowColor: '#000000',
+  shadow: lightTheme.shadow,
+  radius: lightTheme.radius,
+  spacing: lightTheme.spacing,
+  typography: lightTheme.typography
+} as const
+
+export type AppTheme = typeof lightTheme
